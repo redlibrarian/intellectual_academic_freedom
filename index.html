@@ -25,8 +25,161 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+        <section><h2>Discovery and Access Technologies</h2>
+          <h3>Sam Popowich<br />Head, Discovery and Web Services</h3></section>
+        <section><h2>Outline</h2>
+          <ul><li>Discovery vs. The Catalogue</li>
+            <li>Organizational Considerations</li>
+            <li>Core Discovery Technologies</li>
+            <li>Peripheral Discovery Tools and Systems</li>
+            <li>Access and Security</li>
+            <li>Functional Team Considerations</li>
+            <li>Future Strategies</li></ul>
+        </section>
+
+        <section>
+          <h2>Discovery vs. The Catalogue</h2>
+          <img src="img/card_catalogue.jpg" border="0" style="float:
+          left"/>
+          <p style="font-size: 16pt"><br />The Catalogue is the inventory and authority control
+          system for all* surrogate records in the library. Beginning
+           in the 1990s, the catalogue started having a public interface
+           (called the Online Public Access Catalogue, or OPAC). The
+           catalogue and the OPAC were often considered the same thing,
+           but they were two different tools. A discovery system makes
+           the difference much clearer.</p>
+
+          <p style="font-size: 16pt"><br /><br />*While we often conceptualize the
+          catalogue as the main repository of records, in fact a smaller
+          and smaller proportion of records are held in the catalogue
+          itself. We will talk about other record systems in a
+          moment.</p>
+        </section>
+
+        <section>
+          <h2>Discovery vs. The Catalogue</h2>
+          <img src="img/jekyll.jpeg" border="0" height="400" style="float: left"/>
+          <p style="font-size: 16pt"><br />The Discovery system is considered
+          distinct from the catalogue. We don't <em>maintain</em> any
+          records in the Discovery system. Instead, we populate it using
+          records from other, canonical, systems (i.e. systems in which
+          we ensure the correctness and integrity of the data). This
+          way, we don't have to try to maintain records in two
+          places.</p>
+        </section>
+
+        <section>
+          <h2>Discovery vs. The Catalogue</h2>
+          <img src="img/blacklight.jpg" border="0" height="400"/>
+          <p style="font-size: 16pt; text-align:left"><br />Until 2013, we had a few
+          different Discovery systems, including the OPAC. In 2013, we
+          developed a new Discovery strategy which saw us get rid of all
+          Discovery systems except Ebsco Discovery Service, and
+          implement an open-source Discovery application called
+          Blacklight.</p>
+        </section>
+
+        <section>
+          <h2>Organizational Considerations</h2>
+          <img src="img/metadata.png" border="0" height="400"
+                                                 style="float: left;
+                                                 background-color:
+                                                 lightblue"/>
+          <p style="font-size: 16pt"><br />In addition to a lot of other
+          things, Cataloguing and Metadata (CatMet) maintains the
+          data in a number of systems used by discovery, including the
+          catalogue and the SFX link resolver knowledge base.</p> 
+        </section>
+
+        <section><h2>Organizational Considerations</h2>
+          <img src="img/programming.jpg" border="0" height="300"
+                                                    />
+          <p style="font-size: 16pt; text-align:left"><br />Responsibility for the
+          Discovery system falls mainly to me and the Web Team,
+          including Natasha Nunn and April Fodor. The Unix team in ITS
+          handles the server infrastructure, and the ITS development
+          teams (that sits in DI) does most of the programming now.</p> 
+        </section>
+
+        <section><h2>Organizational Considerations</h2>
+          <img src="img/skyscrapers.jpg" border="0" height="400"
+                                                   style="float:left;
+                                                   margin-right:10px"/>
+          <p style="font-size: 16pt; text-align:left;"><br />Overall
+          organizational responsibility for Discovery's public face sits
+          with the Web Architecture Team, which will be replaced at some
+          point by the functional team for Discovery in our new team
+          structure. Additionally, I sit on the Public Service Council
+          to make sure that communication and consultation between
+          public services and ITS is smoothly maintained.
+          </p> 
+        </section>
+
+        <section><h2>Core Discovery Technologies</h2>
+          <ul style="font-size:16pt"><li>Blacklight: Open Source Discovery Service (web
+              application)</li>
+            <li>Solr: Open Source indexing system (for search,
+              relevance, etc).</li>
+            <li>NOTE: <strong>NO</strong> authority structure in
+              discovery.</li>
+            <li>The catalogue: source of bibliographic records.</li>
+            <li>SFX: source of electronic serial records (at the journal
+              level), with subscription
+              information and electronic links.</li>
+            <li>LibGuides: source of database records.</li>
+            <li>EDS: for individual article search.</li>
+            <li>Potential for other record sources to be added.</li>
+          </ul>
+        </section>
+
+        <section><h2>Core Discovery Technologies</h2>
+          <p>Why do we need EDS for article-level searching?</p>
+        </section>
+
+        <section><h2>Peripheral Discovery Tools and Services</h2>
+          <ul style="font-size:16pt"><li>ERA, ERA A+V, Peel's Prairie
+              Provinces, Internet Archive, etc.</li>
+            <li>Not currently included under a library-wide Discovery
+              strategy, WAT, etc. This will likely change, at least to a
+              certain extent.</li>
+            <li>Basically, any system that exposes records to users
+              should be covered by a Discovery strategy.</li>
+            <li>This includes what Lorcan Dempsey calls "inside-out"
+              Discovery in addition to traditional "outside-in"
+              discovery.</li>
+          </ul>
+        </section>
+
+        <section><h2>Access and Security</h2>
+          <img src="img/security.jpg" border="0" height="400"/>
+          <p style="font-size: 16pt; text-align:left">Two ways to think
+          about this: <em>enabling</em> access and <em>limiting
+        access</em>. In many ways these are in tension with each other.</p>
+        </section>
+
+        <section><h2>Access and Security</h2>
+          <ul><li>IP-based Security: EZProxy, CCID vs. Network ID,
+              PeopleSoft, CCID Granting and Blocking, VPN.</li>
+            <li>Federated Identity: Shibboleth, Canadian Access
+              Federation, Google's CASA, RA21.</li>
+          </ul>
+        </section>
+
+        <section><h2>Functional Team Considerations</h2>
+          <img src="img/soccer.jpg" border="0" height="400"/>
+          <p style="font-size: 16pt; text-align: left">Scope? Mandate?
+          Membership?</p>
+        </section>
+
+        <section><h2>Future Strategies</h2>
+          <img src="img/polynesian.jpeg" border="0" height="400"/>
+        </section>
+
+        <section><h2>Thank You. Questions?</h2>
+        <img src="img/rabbit.jpg" border="0" height="400"/>
+        </section>
+
+
 			</div>
 		</div>
 
